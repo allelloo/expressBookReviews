@@ -1,9 +1,24 @@
 const express = require('express');
+const fs = require('fs');
 const jwt = require('jsonwebtoken');
 let books = require("./booksdb.js");
 const regd_users = express.Router();
 
 let users = [];
+
+
+exports.userss = () => {
+    try{
+        let users = JSON.parse(fs.readFileSync('./data/users.json', 'utf8'));
+        return users;
+    } catch (err){
+        console.log(err);
+        return [];
+    }
+}
+
+
+
 
 const isValid = (username)=>{ //returns boolean
 //write code to check is the username is valid
