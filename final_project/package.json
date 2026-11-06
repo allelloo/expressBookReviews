@@ -11,6 +11,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^18.0.9",
     "express": "^4.22.3",
     "express-session": "^1.19.0",
     "jsonwebtoken": "^9.0.3"

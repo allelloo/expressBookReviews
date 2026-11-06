@@ -1,3 +1,9 @@
+
+const fs = require('fs');
+
+
+
+
 let books = {
   1: { author: "Chinua Achebe", title: "Things Fall Apart", reviews: {} },
   2: { author: "Hans Christian Andersen", title: "Fairy tales", reviews: {} },
@@ -18,5 +24,9 @@ let books = {
     reviews: {},
   },
 };
+
+
+books = JSON.parse(fs.readFileSync('./data/books.json', 'utf8'));
+
 
 module.exports = books;
